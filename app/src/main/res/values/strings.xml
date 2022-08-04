@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AD Rental House</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="Conpass">Confirm Password</string>
+    <string name="fnm">Full Name</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="addHome">Rent Your Property</string>
+    <string name="rentHome">Renting a \n Home</string>
+    <string name="rentApartment">Renting a Apartment</string>
+    <string name="logout">Logout</string>
+    <string name="name">Owner Full Name</string>
+    <string name="indHouse">Independent House</string>
+    <string name="apartment">Apartment</string>
+    <string name="phone">Phone Number</string>
+    <string name="youlookingfor">You\'re looking to...</string>
+    <string name="youinfo">You\'re Information...</string>
+    <string name="address">Address</string>
+    <string name="locality">Locality</string>
+    <string name="sublocality">Sub Locality</string>
+    <string name="ageofproperty">Age of Property</string>
+    <string name="willingtorent">Willing to rent out to</string>
+    <string name="uploadimg">Upload Image</string>
+    <string name="tellus">Tell us about your property</string>
+    <string name="roomde">Add Room Detaile</string>
+    <string name="totalfloor">Floor Details</string>
+    <string name="about_property">Any other details of property</string>
+    <string name="User" />
+    <!--REGISTER-->
+    <string name="user">User Name</string>
+    <string name="top_icon">TOP ICON</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="or">OR</string>
+    <string name="google_icon">google icon</string>
+    <string name="facebook_icon">facebook icon</string>
+    <string name="users">New User? </string>
+    <string name="Register_Now">Register Now</string>
+    <string name="register">Register</string>
+    <string name="price">Rent Price:</string>
+    <string name="total_apartment">Total Apartment</string>
+</resources>

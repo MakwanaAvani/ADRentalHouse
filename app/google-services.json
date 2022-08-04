@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "172932567469",
+    "project_id": "adrentalhouse",
+    "storage_bucket": "adrentalhouse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172932567469:android:147d835799a319ff1d9124",
+        "android_client_info": {
+          "package_name": "com.ad.adrentalhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172932567469-339v51lk1b7d010ic814fr89lci1ddc3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ad.adrentalhouse",
+            "certificate_hash": "628b4a052f28b47b138663dbe0adab4c1e2eeb3f"
+          }
+        },
+        {
+          "client_id": "172932567469-7a3rb9o4ab8papd5rk1u2aouvmdbfu4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuTsRU0gJs8Xtp2b48CE_wiIUWSwJey7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172932567469-7a3rb9o4ab8papd5rk1u2aouvmdbfu4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

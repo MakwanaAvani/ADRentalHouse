@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/apartment"
+            android:icon="@drawable/ic_baseline_apartment_24"
+            android:title="Apartment" />
+        <item
+            android:id="@+id/indepHouse"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Independent House" />
+    </group>
+    <item android:title="Communication">
+        <menu>
+            <item
+                android:id="@+id/contctus"
+                android:icon="@drawable/email"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/con1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3D2C1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/con2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/loginbg_ly"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Welcome To \nAD rental house"
+            android:textAlignment="center"
+            android:textColor="#002858"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="The fastest way to find \n a comfortable house"
+            android:textColor="#002858"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btncre"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/loginbg_ly"
+            android:backgroundTint="@color/colorall"
+            android:onClick="pReg"
+            android:text="Create Account"
+            android:textColor="#15133C"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnsign"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/loginbg_ly"
+            android:backgroundTint="@color/colorall"
+            android:onClick="Singin"
+            android:text="Sign in"
+            android:textColor="#15133C"
+            android:textSize="20sp"></Button>
+
+
+    </LinearLayout>
+
+</LinearLayout>

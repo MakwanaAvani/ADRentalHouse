@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RentYourProperty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F3D2C1"
+            app:title="@string/addHome" />
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_grey"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/image_corners">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/youlookingfor"
+                        android:textColor="#15133C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/houapar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:autofillHints="you find house or apartment"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/indHouse"
+                            android:layout_width="160dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="10dp"
+                            android:text="@string/indHouse"
+                            android:textAlignment="center"
+                            android:textSize="15dp" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/apartment"
+                            android:layout_width="160dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="10dp"
+                            android:text="@string/apartment"
+                            android:textAlignment="center"
+                            android:textSize="15dp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/youinfo"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/name"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edname"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textPersonName"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/email"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edrent_your_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textEmailAddress"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/phone"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edrent_your_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textPhonetic"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/address"
+                        android:textColor="#15133C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtlocality1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/locality"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edrent_your_locality"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textMultiLine"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtlocality2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/sublocality"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edrent_your_sublocality"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textMultiLine"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/tellus"
+                        android:textColor="#15133C"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/roomde"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/roomgroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="76dp"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <RadioButton
+                            android:id="@+id/room1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="10dp"
+                            android:text="1"
+                            android:textAlignment="center" />
+
+                        <RadioButton
+                            android:id="@+id/room2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="8dp"
+                            android:text="2"
+                            android:textAlignment="center" />
+
+                        <RadioButton
+                            android:id="@+id/room3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="8dp"
+                            android:text="3"
+                            android:textAlignment="center" />
+
+                        <RadioButton
+                            android:id="@+id/room4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:padding="8dp"
+                            android:text="4"
+                            android:textAlignment="center" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/totalfloor"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txttotalfloor"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Total no of floors and your floor details"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_total_floor"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="number"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/ageofproperty"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/ageofproperty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="you find house or apartment"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/agezerotoone"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:text="0-1 years"
+                            android:textAlignment="center"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/ageonetofive"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:text="1-5 years"
+                            android:textAlignment="center"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/agefivetoten"
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+
+                            android:text="5-10 years"
+                            android:textAlignment="center"
+                            android:textSize="15dp"
+                            app:useMaterialThemeColors="false" />
+
+                        <RadioButton
+                            android:id="@+id/agetenmore"
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:text="10+ years"
+                            android:textAlignment="center"
+                            android:textSize="15dp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/willingtorent"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/che_rent_out_fam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:button="@drawable/custom_check_box"
+                        android:checked="false"
+                        android:text="Family"
+                        android:textSize="15dp"
+                        app:useMaterialThemeColors="false" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/che_rent_out_single_men"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:button="@drawable/custom_check_box"
+                        android:checked="false"
+                        android:text="Single men"
+                        android:textSize="15dp"
+                        app:useMaterialThemeColors="false" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/che_rent_out_single_women"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:button="@drawable/custom_check_box"
+                        android:checked="false"
+                        android:text="Single women"
+                        android:textSize="15dp"
+                        app:useMaterialThemeColors="false" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/uploadimg"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageupload"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp" />
+
+                        <Button
+                            android:id="@+id/btnuploadimage"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/loginbg_ly"
+                            android:backgroundTint="#F582AE"
+                            android:text="Upload Image"
+                            android:textColor="#15133C"
+                            android:textSize="15sp"></Button>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Rent Details"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Expected Rent"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="number"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="About Property for other things"
+                        android:textColor="#15133C"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtabout_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="@string/about_property"
+                        android:outlineAmbientShadowColor="@color/spk"
+                        app:counterMaxLength="10"
+                        app:hintTextColor="@color/spk">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edabout_property"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textMultiLine"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/btnsubimt"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/loginbg_ly"
+                        android:backgroundTint="#F582AE"
+                        android:text="Submit"
+                        android:textAlignment="center"
+                        android:textColor="#15133C"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
